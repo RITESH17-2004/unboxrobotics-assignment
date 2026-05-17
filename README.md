@@ -105,12 +105,12 @@ flowchart LR
   <!-- ROW 2 -->
   <tr>
     <td width="50%" align="center" valign="top">
-      <b><br>4. Backend Terminal Logs</b><br><br>
+      <b><br>3. Backend Terminal Logs</b><br><br>
       <img src="assets/gallery/backend_logs.png" width="100%" alt="Backend Logs" /><br><br>
       <i>Python backend asynchronously inserting data and broadcasting to clients.</i>
     </td>
     <td width="50%" align="center" valign="top">
-      <b><br>5. PostgreSQL Database View</b><br><br>
+      <b><br>4. PostgreSQL Database View</b><br><br>
       <img src="assets/gallery/database.png" width="100%" alt="Database Logs Table" /><br><br>
       <i>Direct view of the `speed_data` table storing the telemetry.</i>
     </td>
@@ -118,7 +118,7 @@ flowchart LR
   <!-- ROW 3 -->
   <tr>
     <td width="50%" align="center" valign="top">
-      <b><br>6. Docker Containers Running</b><br><br>
+      <b><br>5. Docker Containers Running</b><br><br>
       <img src="assets/gallery/docker.png" width="100%" alt="Docker Containers" /><br><br>
       <i>The 3 isolated containers seamlessly communicating in Docker Desktop.</i>
     </td>
