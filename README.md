@@ -5,6 +5,8 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
+---
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Problem Statement](#problem-statement)
@@ -21,11 +23,17 @@
 ## <a id="introduction"></a>1. Introduction
 The Real-Time Speedometer App is a fully dockerized, full-stack application designed to track, store, and visualize time-series speed data. This dashboard serves as a highly responsive monitoring tool that consumes live sensor data seamlessly using modern WebSockets. It features a premium, aesthetic dark-mode UI with glassmorphism components, custom SVG icons, and smooth layout rendering.
 
+---
+
 ## <a id="problem-statement"></a>2. Problem Statement
 In many IoT and telemetry applications, sensor data is generated continuously and needs to be analyzed instantaneously. Traditional polling architectures fail to deliver a true "real-time" experience and overload servers. The challenge is to build an efficient, scalable, and dockerized system that processes 1-second interval time-series data and pushes it to a live UI without latency.
 
+---
+
 ## <a id="solution"></a>3. Solution
 This project implements an event-driven architecture using **WebSockets**. A Python backend simulates a physical sensor, generating continuous speed records every second and persisting them in a robust **PostgreSQL** database. Upon insertion, the backend broadcasts the newly acquired data directly to a **Next.js** frontend, instantly rendering the telemetry on a dynamic D3-based speedometer.
+
+---
 
 ## <a id="architectural-diagram"></a>4. Architectural Diagram
 ```mermaid
@@ -42,11 +50,15 @@ flowchart LR
     style Sensor fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
+---
+
 ## <a id="tech-stack"></a>5. Tech Stack
 - **Frontend**: Next.js (React), TailwindCSS, `react-d3-speedometer`, `recharts`, Next Google Fonts (Outfit & JetBrains Mono)
 - **Backend**: Python 3.11, `asyncio`, `websockets`, `asyncpg`
 - **Database**: PostgreSQL 15
 - **Infrastructure**: Docker & Docker Compose
+
+---
 
 ## <a id="installation"></a>6. Installation and Setup
 
@@ -54,9 +66,10 @@ flowchart LR
 - **Docker** and **Docker Compose** installed on your system.
 
 ### Steps
-1. **Clone the repository** (if applicable) and navigate to the root directory:
+1. **Clone the repository** and navigate to the root directory:
    ```bash
-   cd speedometer-dashboard
+   git clone https://github.com/RITESH17-2004/unboxrobotics-assignment.git
+   cd unboxrobotics-assignment
    ```
 2. **Start the containers** using Docker Compose:
    ```bash
@@ -73,7 +86,7 @@ flowchart LR
 
 ---
 
-## <a id="gallery"></a>📸 7. Visual Gallery
+## <a id="gallery"></a> 7. Visual Gallery
 
 <table width="100%" style="border-collapse: collapse;">
   <!-- ROW 1 -->
@@ -123,6 +136,8 @@ While this architecture heavily relies on WebSockets rather than traditional RES
 | **WebSocket Hub** | WS | `ws://localhost:8765` | Python backend broadcasting speed telemetry. |
 | **Database** | TCP | `localhost:5432` | Raw access to the PostgreSQL `speedometer` database. |
 
+---
+
 ## <a id="structure"></a>9. Project Structure
 ```text
 speedometer-dashboard/
@@ -145,6 +160,8 @@ speedometer-dashboard/
 
 ## <a id="conclusion"></a>10. Conclusion
 This assignment successfully demonstrates the ability to architect, build, and containerize a modern, real-time web application. By leveraging WebSockets and Docker Compose, we ensure low-latency data delivery and an environment-agnostic deployment process, addressing the core challenges of live telemetry monitoring.
+
+---
 
 ## Thank You!
 Thank you for reviewing this project! I hope this dashboard demonstrates a strong understanding of full-stack engineering, real-time data flow, and modern containerization practices. If you have any questions or feedback, please feel free to reach out.
